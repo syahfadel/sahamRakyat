@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "3bbc9b33-9b12-4e7f-aad3-0e59bc1b3d09",
+		"name": "Saham Rakyat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25553199"
+	},
+	"item": [
+		{
+			"name": "Order Item",
+			"item": [
+				{
+					"name": "Create Order Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"item11\",\r\n    \"price\" : 110000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/orderItem",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderItem/page/1/limit/10",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderItem",
+								"page",
+								"1",
+								"limit",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Item by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderItem/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"item2\",\r\n    \"price\" : 1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/orderItem/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderItem/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\" : \"user12\",\r\n    \"first_order\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/user/page/1/limit/10",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"page",
+								"1",
+								"limit",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/user/15",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\" : \"user1\",\r\n    \"first_order\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order History",
+			"item": [
+				{
+					"name": "Create Order History",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 1,\r\n    \"order_item_id\" : 1,\r\n    \"descriptions\" : \"descriptions5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/orderHistory",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderHistory/userId/1/page/1/limit/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderHistory",
+								"userId",
+								"1",
+								"page",
+								"1",
+								"limit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Histories by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderHistory/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order History",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 5,\r\n    \"order_item_id\" : 2,\r\n    \"descriptions\" : \"descriptions1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/orderHistory/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order History",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/orderHistory/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
